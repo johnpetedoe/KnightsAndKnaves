@@ -1,4 +1,4 @@
-# Problem 0
+# Problem 0 v1
 0000 All persons are either knights or knaves.
 0001 Knights only tell the truth.
 0002 Knaves only lie. 
