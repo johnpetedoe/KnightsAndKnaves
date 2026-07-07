@@ -57,9 +57,13 @@ This will allow us to remove ambiguity and solve the problem independent indepen
 0300  For all x, "x is false" implies the "negation of x".
 
 0201 (=> [A, B] (^ A B))
+0301
+
 0202 (=> (^ (= a b) (= b c)) (= a c))
-0203 ()
-## PROOF 0 (= A T)
+0302
+
+0203 (=> (=> a b) (=> b c)) (=> a c)))
+0201
 
 # PROOF 0 (= A T)
 0400 (=> A (~ (INCL B Kn0)))
@@ -68,10 +72,13 @@ This will allow us to remove ambiguity and solve the problem independent indepen
 0403 (=> (INCL B Kn0) (~ (INCL B Kn0))) # SEP
                                         # CONTRADICTION
                                         # THE SYSTEM {A B} is INCONSISTANT
+
 # PROOF 1 (^ (= A T) (= B F))
 0600 (= A T)                            # GIVEN
 0601 (= B F)                            # GIVEN
 0602 (= A (INCL B Kn0))                 # 0000
 0603 (^ (= A T) (= A (INCL B Kn0)))     # 0201, 0000, 0602
 0604 (= (INCL B Kn0) T)                 # 0603, 0202
-0605 (=> (= (INCL B Kn0) T) (INCL B Kn0)) )
+0605 (=> (= (INCL B Kn0) T) (INCL B Kn0)) ) 
+0606 (INCL B Kn0)
+0607 (=> (INCL B KN0) (~ (INCL B Kn0)) ) # (=> (=> a b) (=> b c)) (=> a c))) 
