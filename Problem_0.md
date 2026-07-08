@@ -101,92 +101,95 @@ This will allow us to remove ambiguity and solve the problem independent indepen
 0503:  "**A** is **true**" implies "'**B** is included in the set of knights' is **true**"
 
 
-0404:  `(=> (INCL B Kn0) (= B T))`
+0404: `(=> (INCL B Kn0) (= B T))`
 
-0504: 
+0504: '**B** is included in the set of *knights*' implies '**B** is true'
 
 
 0405:  `(=> (= B T) (= (~ (INCL B Kn0)) T))`
 
-0505:  
+0505:  "**B** is true" implies: "It is not the case that, 'B is included in the set of knights' is true"
 
 
 0406:  `(=> (= (~ (INCL B Kn0)) T) (~ (INCL B Kn0)))`
 
-0506:  
+0506:  "It is not the case that, 'B is included in the set of knights' is true" implies "It is not the case that, 'B is included in the set of knights'"
 
 
 0407:  `(=> A (~ (INCL B Kn0)))`                                             # 0204
 
-0507:
+0507:  A implies, It is not the case, that B is included in the set of knights
 
 
 0408:  `(=> (= A (INCL B Kn0)) (= (= A (INCL B Kn0) T)) )`                   # 0201, 0401
 
-0508: 
+0508: "A is equal to the statement, 'B is included in the set of knights'" implies "'A is equal to the statement, "B is included in the set of knights"' is true"
 
 
 0409:  `(=> (=> A (~ (INCL B Kn0))) (= (=> A (~ (INCL B Kn0))) T) )`         # 0201, 0407
 
-0509:
+0509: "A implies 'it is not the case that B is not included in the set of knights'" implies "'A implies "it is not the case that B is included in the set of knights"' is true"
 
 
-0410 `(= (=> A (~ (INCL B Kn0))) T)`
+0410:  `(= (=> A (~ (INCL B Kn0))) T)`
 
-0510
-
-
-0411 `(= (= A (INCL B Kn0)) T)`
-
-0511
+0510: "'A implies "it is not the case that B is not included in the set of knights"' is true"
 
 
-0412 `(=> (^ (= A (INCL B Kn0)) (=> A (~ (INCL B Kn0)))) (=> (INCL B Kn0) (~ (INCL B Kn0))))`
 
-0512
+0411: `(= (= A (INCL B Kn0)) T)`
 
-0413 `(=> (INCL B Kn0) (~ (INCL B Kn0)))`                                 # CONTRADITION
+0511: "'A is equal to the statement, "B is included in the set of knights"' is true"
 
-0513
+
+0412: `(=> (^ (= A (INCL B Kn0)) (=> A (~ (INCL B Kn0)))) (=> (INCL B Kn0) (~ (INCL B Kn0))))`
+
+0512: "'A is equal to the statement, "B is included in the set of knights"' and 'A implies "it is not the case that B is included in the set of knights"'" implies, "'B is included in the set of knights' implies 'It is not the case that B is included in the set of knights'"
+
+
+0413: `(=> (INCL B Kn0) (~ (INCL B Kn0)))`                                 # CONTRADITION
+
+0513: "'B is included in the set of knights' implies 'It is not the case that B is included in the set of knights'"
+
 
 # PROOF 1 (^ (= A T) (= B F))
-0600 `(= A T)`                                 # GIVEN
+0600: `(= A T)`                                 # GIVEN
 
-0700
+0700:  A is true
 
-0601 `(= B F)`                                 # GIVEN
+0601: `(= B F)`                                 # GIVEN
 
-0701
+0701: B is false
 
-0602 `(= A (INCL B Kn0))`                      # 0000
+0602: `(= A (INCL B Kn0))`                      # 0000
 
-0702
+0702: A is 
 
-0603 `(^ (= A T) (= A (INCL B Kn0)))`          # 0202, 0000, 0602
+0603: `(^ (= A T) (= A (INCL B Kn0)))`          # 0202, 0000, 0602
 
-0703
+0703:  **A** is equal to the statement, '**B** is included in the set of knights'.
 
-0604 `(= (INCL B Kn0) T)`                      # 0603, 0202
+0604: `(= (INCL B Kn0) T)`                      # 0603, 0202
 
-0704
+0704: 
 
-0605 `(=> (= (INCL B Kn0) T) (INCL B Kn0)) )`  # 
+0605: `(=> (= (INCL B Kn0) T) (INCL B Kn0)) )`  # 
 
-0705
+0705:
 
-0606 `(INCL B Kn0)`                            # SEP
+0606: `(INCL B Kn0)`                            # SEP
 
-0706
+0706:
 
-0607 `(=> (INCL B Kn0) (= B T))`               # 0204
+0607: `(=> (INCL B Kn0) (= B T))`               # 0204
 
-0707
+0707:
 
-0608 `(=> (= B T) (~ (INCL B Kn0)))`           # 0202
+0608: `(=> (= B T) (~ (INCL B Kn0)))`           # 0202
 
-0708
+0708:
 
-0609 `(=> (INCL B Kn0) (~ (INCL B Kn0)))`      # 0203
+0609: `(=> (INCL B Kn0) (~ (INCL B Kn0)))`      # 0203
                                                # CONTRADICTION
 
 CONCLUSION: **A** telling the truth necessitates the *inconsistancy* of the sustem **{A B}**. If **A** is a knight, the system, **{A B}**, is *inconsistant*.
