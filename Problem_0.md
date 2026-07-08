@@ -13,7 +13,7 @@
 
 0004: Is A a knight?
 
-To solve this problem, we can start be representing it's truth table:
+We can start be representing it's truth table:
 
 
 | A | B | {T, F, C} |
@@ -162,6 +162,14 @@ This will allow us to remove ambiguity and solve the problem independent indepen
 
 0513: "'**B** is included in the set of *knights*' implies 'It is not the case that **B** is included in the set of *knights*'"
 
+The contradiction of 0413 indicates that **A** and **B** cannot both tell the *truth*.
+
+| A | B | {T, F, C} |
+|---|---|-----------|
+| T | T | F         |
+| T | F |           |
+| F | T |           |
+| T | T |           |
 
 #### PROOF 1 (^ (= A T) (= B F))
 0600: `(= A T)`                                 # GIVEN
@@ -189,7 +197,7 @@ This will allow us to remove ambiguity and solve the problem independent indepen
 0704: **B** is included in the set of *knights*" is *true* 
 
 
-0605: `(=> (= (INCL B Kn0) T) (INCL B Kn0)) )`  # 0201
+0605: `(=> (= (INCL B Kn0) T) (INCL B Kn0)) )`  # 0201                # This implication can be expanded
 
 0705: "'**B** is included in the set of *knights*' is *true*" implies "**B** is included in the set of *knights*"
 
@@ -212,11 +220,17 @@ This will allow us to remove ambiguity and solve the problem independent indepen
 0609: `(=> (INCL B Kn0) (~ (INCL B Kn0)))`      # 0203
 0709: "**B** is included in the set of *knights*" implies "It is not the case, '**B** is included in the set of *knights*'"                                                                 # CONTRADICTION
 
-
 CONCLUSION: **A** telling the truth necessitates the *inconsistancy* of the sustem **{A B}**. If **A** is a knight, the system, **{A B}**, is *inconsistant*.
 
-Fortunatley for **{A B}**, **A** has made no statements about it's own knight-hood.
+| A | B | {T, F, C} |
+|---|---|-----------|
+| T | T | F         |
+| T | F | F         |
+| F | T |           |
+| F | F |           |
 
+Regardless of whether B
+Fortunatley for **{A B}**, **A** has made no statements about it's own knight-hood.
 
 If you're interested in more problems like this, or have questions about either the language or system used to formulate this problem, feel free to contact the author at: 
 
