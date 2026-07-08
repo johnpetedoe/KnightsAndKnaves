@@ -229,7 +229,6 @@ CONCLUSION: **A** telling the truth necessitates the *inconsistancy* of the sust
 | F | T |           |
 | F | F |           |
 
-Regardless of whether B
 Fortunatley for **{A B}**, **A** has made no statements about it's own knight-hood.
 
 If you're interested in more problems like this, or have questions about either the language or system used to formulate this problem, feel free to contact the author at: 
