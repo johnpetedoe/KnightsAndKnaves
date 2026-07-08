@@ -26,7 +26,7 @@ To solve this problem I will begin by translating each statement into a *formal 
 
 This will allow us to remove ambiguity and solve the problem independent independently of it's interpretation like a math problem.
 
-## Formulation of the problem                      
+### Formulation of the problem                      
 
 0000  All persons are either knights or knaves.
 
@@ -66,11 +66,11 @@ This will allow us to remove ambiguity and solve the problem independent indepen
 ## Rule Set 0
 0200: `(:A x (^ (=> (= x F) (~x)) (=> (~x) (= x F)))`
 
-0300:  For all *x*, "*x* is false" implies the "negation of *x*".
+0300:  For all **x**, "**x** is false" implies the "negation of **x**".
 
 0201: `(:A x (^ (=> x (= x T)) (=> (= x T) x))`
 
-0301: For all *x*, "*x* implies '*x* is *true*'" and "'*x* is True' implies *x*".  
+0301: For all **x**, "**x** implies '**x** is **true**'" and "'**x** is True' implies **x**".  
 
 0202: `(:A [A, B] (=> (^ (= A T) (= B T)) (^ A B))`
 
