@@ -39,28 +39,28 @@ This will allow us to remove ambiguity and solve the problem independent indepen
 
 0101 `(:A x (=> (INCL x Kn0) (= x T)))`
 
-0801 For all **x**, '**x**' is included in the set of knights' implies '**x** is true'.
+0801 For all **x**, '**x**' is included in the set of knights' implies '**x** is **true**'.
 
 
 0002  Knaves only lie
 
 0102 `(:A x (=> (INCL x Kn1) (= x F)))`
 
-0802 For all **x**, '**x** is included in the set of knaves' implies '**x** is false'.
+0802 For all **x**, '**x** is included in the set of knaves' implies '**x** is **false**'.
 
 
 000300 A: B is a knight
 
 010300 `(= A (INCL B Kn0))`
 
-080300 **A** is equal to the statement, '**B** is included in the set of knights'.
+080300 **A** is equal to the statement, '**B** is included in the set of *knights*'.
 
 
 000301 B: I am not a knight
 
 010301 `(= B (~ (INCL B Kn0))`
 
-080300 **B** is equal to the statement, 'It is not the case, that B is included in the set of knights'.
+080300 **B** is equal to the statement, 'It is not the case, that B is included in the set of *knights*'.
 
 
 ## Rule Set 0
@@ -74,19 +74,19 @@ This will allow us to remove ambiguity and solve the problem independent indepen
 
 0202: `(:A [A, B] (=> (^ (= A T) (= B T)) (^ A B))`
 
-0302: For all pairs, *A B*, "'*A* is true' and '*B* is true' implies "*A* and *B*"". 
+0302: For all pairs, **A B**, "'**A** is true' and '**B** is true' implies "**A** and **B**"". 
 
 0203: `(:A (: [a, b, c] (=> (^ (= a b) (= b c)) (= a c))))`
 
-0303: For all triplets, *a b c*, "'a is equal to b' and 'b is equal to c' implies 'a is equal to c'"
+0303: For all triplets, **a b c**, "'**a** is equal to **b**' and '**b** is equal to **c**' implies '**a** is equal to **c**'"
 
 0204: `(:A (: [a, b, c] (=> (=> a b) (=> b c))) (=> a c))`
 
-0304: For all triplets, *a b c*, "'a implies b' and 'b implies c' implies 'a implies c'".
+0304: For all triplets, **a b c**, "'**a** implies **b**' and '**b** implies **c**' implies '**a** implies **c**'".
 
 0205: `(:A (: [a, b] (=> a b)) (=> (= a T) (= b T) ) )`
 
-0305:
+0305: 
 
 0206: `(:A (: [a, b, c] (^ (= a b) (=> b c))) (=> a c))`
 
@@ -97,12 +97,12 @@ This will allow us to remove ambiguity and solve the problem independent indepen
 
 0401:  `(= A (INCL B Kn0))`
 
-0501:  **A** is equal to the statement, '**B** is a knight'.
+0501:  **A** is equal to the statement, '**B** is a *knight*'.
 
 
 0402:  `(= B (~ (INCL B Kn0)))`
 
-0502:  **B** is equal to the statement, 'It is not the case that B is included in the set of Knights' 
+0502:  **B** is equal to the statement, 'It is not the case that B is included in the set of *knights*' 
 
 
 0403:  `(=> (= A T) (= (INCL B Kn0) T) )`
@@ -112,12 +112,12 @@ This will allow us to remove ambiguity and solve the problem independent indepen
 
 0404: `(=> (INCL B Kn0) (= B T))`
 
-0504: '**B** is included in the set of *knights*' implies '**B** is true'
+0504: '**B** is included in the set of *knights*' implies '**B** is **true**'
 
 
 0405:  `(=> (= B T) (= (~ (INCL B Kn0)) T))`
 
-0505:  "**B** is true" implies: "It is not the case that, 'B is included in the set of knights' is true"
+0505:  "**B** is true" implies: "It is not the case that, '**B** is included in the set of *knights*' is *true*"
 
 
 0406:  `(=> (= (~ (INCL B Kn0)) T) (~ (INCL B Kn0)))`                        
