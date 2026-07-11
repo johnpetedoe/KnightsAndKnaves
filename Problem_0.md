@@ -11,6 +11,7 @@
 
 000301:   B: I am not a knight
 
+#### Question:
 0004: Is A a knight?
 
 We can start be representing it's truth table:
