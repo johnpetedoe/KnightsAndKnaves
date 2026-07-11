@@ -27,7 +27,7 @@ We can start by representing it's truth table:
 
 To solve this problem we may begin by translating each statement into a *formal language*.
 
-A *formal language* consists of *well-formed-formulae*, produced according the the rules of production of a *formal grammar*.
+A *formal language* consists of *well-formed-formulae*, produced according the the *rules of production* of a *formal grammar*.
 
 This will allow us to remove ambiguity and solve the problem independently of it's interpretation, like a math problem.
 
