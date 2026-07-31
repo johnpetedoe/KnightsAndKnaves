@@ -1,5 +1,5 @@
 # Problem 0 v1
-The logician, Raymond Smullyan is credited with the invention of knights and knaves puzzles, this first problem is an example of one:
+The following is one example of a classic logic puzzle typically used for learning Boolean algebra, in this document, we prove it's solution using a formal system:
 
 0000: All persons are either knights or knaves.
 
@@ -7,7 +7,7 @@ The logician, Raymond Smullyan is credited with the invention of knights and kna
 
 0002: Knaves only lie. 
 
-0003: Person's A and B say the following sentances:
+0003: Person's A and B say the following sentences:
 
 000300:   A: B is a knight
 
